@@ -1,9 +1,9 @@
 #!/bin/bash
 dnf list installed nginx
-if [ $? -eq 0 ]
+
+if [ $? -ne 0 ]
 then
-echo " My nginx is already installed"
-else
+echo "App is not instlled.. going to install"
 userid=$(id -u)
 
 if [ $userid -ne 0 ]
@@ -21,4 +21,6 @@ else
 echo "nginx was not installed successfully"
 exit 1
 fi
+else
+echo "App is already installed.. Nothing to do"
 fi
