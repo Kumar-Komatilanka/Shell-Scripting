@@ -10,3 +10,10 @@ if [ $userid -ne 0 ]
         echo "You are running as root user"
 fi
 dnf install mysql -y
+if [ $? -eq 0 ]
+then
+echo "Mysql was installed successfully"
+else
+echo "Mysql was not installed successfully"
+exit 1
+fi
