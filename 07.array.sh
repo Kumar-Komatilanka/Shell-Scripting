@@ -1,3 +1,3 @@
 #!/bin/bash
 movies=("pushpa","Varanasi","Kumba")
-echo "First movie is ${movies[0]}"
+echo "First movie: ${movies[0]}"
