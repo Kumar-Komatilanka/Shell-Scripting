@@ -1,5 +1,9 @@
 #!/bin/bash
-
+dnf list installed mysql
+if [ $? -eq 0 ]
+then
+echo " My sql is already installed"
+else
 userid=$(id -u)
 
 if [ $userid -ne 0 ]
@@ -16,4 +20,5 @@ echo "Mysql was installed successfully"
 else
 echo "Mysql was not installed successfully"
 exit 1
+fi
 fi
