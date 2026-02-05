@@ -8,3 +8,4 @@ if [ $userid -ne 0 ]
     else
         echo "You are running as root user"
 fi
+dnf install mysql -y
