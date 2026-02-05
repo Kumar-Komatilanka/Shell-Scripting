@@ -1,8 +1,8 @@
 #!/bin/bash
-dnf list installed mysql
+dnf list installed nginx
 if [ $? -eq 0 ]
 then
-echo " My sql is already installed"
+echo " My nginx is already installed"
 else
 userid=$(id -u)
 
@@ -13,12 +13,12 @@ if [ $userid -ne 0 ]
     else
         echo "You are running as root user"
 fi
-dnf install mysql -y
+dnf install nginx -y
 if [ $? -eq 0 ]
 then
-echo "Mysql was installed successfully"
+echo "nginx was installed successfully"
 else
-echo "Mysql was not installed successfully"
+echo "nginx was not installed successfully"
 exit 1
 fi
 fi
