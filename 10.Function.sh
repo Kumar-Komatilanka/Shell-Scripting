@@ -9,6 +9,7 @@ echo "You are running as a root user"
 fi
 VALIDATE(){
 if [ &1 -eq 0 ]
+then
 echo "$2 was installed successfully"
 else
 echo " $2 was not installed successfully"
