@@ -10,9 +10,9 @@ fi
 VALIDATE(){
 if [ &1 -eq 0 ]
 then
-echo "$2 was installed successfully"
+echo "Installing $2 was success"
 else
-echo " $2 was not installed successfully"
+echo "Installing $2 was failure"
 exit 1
 fi
 }
