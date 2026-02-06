@@ -16,7 +16,7 @@ echo " $2 was not installed successfully"
 exit 1
 fi
 }
-dnf installed mysql
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
 echo "Mysql is not installed.. Going to install"
@@ -25,6 +25,7 @@ VALIDATE $? "mysql"
 else
 echo "progrmme is already installed, nothing to do"
 fi
+dnf list installed nginx
 if [ $? -ne 0 ]
 then
 echo "nginx is not installed.. Going to install"
