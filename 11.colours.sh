@@ -7,17 +7,17 @@ N="\e[0m"
 #Defining script to know whether user is a root user or not
 if [ $USERID -ne 0 ]
 then
-echo " $R Error: $N You should be root user to install programme"
+echo -e " $R Error: $N You should be root user to install programme"
 else
-echo " $G you are running as root user"
+echo -e " $G you are running as root user"
 fi
 #Defining function to check whether programme was installed successfully or not
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-    echo " $G $2 was installed successfully"
+    echo -e " $G $2 was installed successfully"
     else
-    echo "$R $2 was not installed successfully"
+    echo -e "$R $2 was not installed successfully"
     exit 1
     fi
 }
@@ -26,21 +26,21 @@ VALIDATE(){
 dnf list installed mysql
 if [ $? -ne 0 ]
 then
-echo " mysql is not installed going to install"
+echo -e "mysql is not installed going to install"
 dnf install mysql -y
 VALIDATE $? "mysql"
 else
-echo "$G mysql is already installed"
+echo -e "$G mysql is already installed"
 fi
 #Same logic to install nginx
 dnf list installed nginx
 if [ $? -ne 0 ]
 then
-echo " nginx is not installed going to install"
+echo -e "nginx is not installed going to install"
 dnf install nginx -y
 VALIDATE $? "nginx"
 else
-echo "$G nginx is already installed"
+echo "-e $G nginx is already installed"
 fi
 
 
