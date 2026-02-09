@@ -40,7 +40,7 @@ echo -e "nginx is not installed going to install"
 dnf install nginx -y
 VALIDATE $? "nginx"
 else
-echo "-e $G nginx is already installed"
+echo -e "$G nginx is already installed"
 fi
 
 
