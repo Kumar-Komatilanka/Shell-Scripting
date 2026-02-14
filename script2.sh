@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Home=Mukkamala
+Home="Mukkamala"
 echo "Welcome to my home"
 echo "process id of script2sh is $$"
 
