@@ -9,9 +9,10 @@
 
 
 #!/bin/bash
+source ./script2.sh
 Greeting=Kumar
 
-source ./script2.sh
+
 echo "Welcome to my world"
 echo "PID of script1.sh is $$"
 echo "My village is $Home"
