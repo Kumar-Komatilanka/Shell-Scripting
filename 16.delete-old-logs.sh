@@ -18,7 +18,7 @@ then
 echo -e "$R You must be a root user to run the script $N" | tee -a $LOG_FILE
 exit 1
 else
-echo "$G you are running as a root user $N" | tee -a $LOG_FILE
+echo -e "$G you are running as a root user $N" | tee -a $LOG_FILE
 fi
 echo "Script started executing at $(date)" | tee -a $LOG_FILE
 
