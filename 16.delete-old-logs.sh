@@ -20,10 +20,10 @@ exit 1
 else
 echo -e "$G you are running as a root user $N" | tee -a $LOG_FILE
 fi
-echo "Script started executing at $(date)" | tee -a $LOG_FILE
+echo -e "$G Script started executing at $(date)" $N | tee -a $LOG_FILE
 
 while IFS= read -r line
 do
-echo "$R deleting $line file" $N | tee -a $LOG_FILE
+echo -e "$R deleting $line file" $N | tee -a $LOG_FILE
 rm -rf $line
 done <<< $FILE_TO_DELETE
