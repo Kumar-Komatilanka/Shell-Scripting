@@ -20,7 +20,8 @@ USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
 PARTITION=$(echo $line | awk '{print $7}')
 if [ $USAGE -ge $DISK_THRESOLD ]
 then
-MSG="High disk usage on $PARTITION: $USAGE"
+#MSG="High disk usage on $PARTITION: $USAGE"  #this will replace the previous message with new one. In order to append we need to add MSG+
+MSG+="High disk usage on $PARTITION: $USAGE" 
 fi
 done <<< $DISK_USAGE
 echo $MSG
