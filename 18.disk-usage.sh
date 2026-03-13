@@ -24,4 +24,4 @@ then
 MSG+="High disk usage on $PARTITION: $USAGE \n" 
 fi
 done <<< $DISK_USAGE
-echo  $MSG
+echo -e $MSG
